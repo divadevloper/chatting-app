@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/421cfd4472.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="sub-container">
+            <div id="div-btn">
+                <button onclick="signinbtn()">Sign up</button>
+                <button onclick="logininbtn()">Login</button>
+            </div>
+                <form id="register" class="mx-auto p-3 rounded shadow mt-4" action="">
+                    <h3 class="texee">Sign up</h3>
+                    <h5 id="message"></h5>
+                    <div class="form-group mt-3">
+                        <label class="texee" for="">Username</label>
+                        <input id="username" type="text" class="form-control">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="texee" for="">Email</label>
+                        <input id="email" type="email" class="form-control">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="texee" for="">Password</label>
+                        <input id="pass" type="password" class="form-control">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button onclick="register(event)" class="btn w-50 fs-3" id="buton">Signin</button>
+                    </div>
+
+                    <div id="all">
+
+                        <p> ________________0r _________________ </p>
+                      <div id="mailbttt">
+                        <i onclick="google()" class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                      </div>
+                    </div>
+                </form>
+
+                
+                    <form id="login" class="mx-auto p-3 rounded shadow mt-4" action="">
+                        <h3 class="texee">Login</h3>
+                        <div class="form-group mt-3">
+                            <label class="texee" for="">Email</label>
+                            <input id="useremail" type="email" class="form-control">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label class="texee" for="">Password</label>
+                            <input id="userpassword" type="password" class="form-control">
+                        </div>
+                        <div class="d-flex box">
+                           <div class="checker d-flex gap-2">
+                            <input type="checkbox" name="" id="uu">
+                            <p>Remember me</p>
+                           </div>
+                           <a href="#">Forget Password?</a>
+
+                        </div>
+
+
+                        <div class="text-center mt-3">
+                            <button onclick="loginWith(event)" class="w-50 fs-3" id="buton">Login</button>
+                        </div>
+    
+                    </form>
+                
+            
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCA9FUL8ECrT4QBqbcAmNqea42pmFX-rOU",
+      authDomain: "chat-fdedf.firebaseapp.com",
+      projectId: "chat-fdedf",
+      storageBucket: "chat-fdedf.appspot.com",
+      messagingSenderId: "96498108317",
+      appId: "1:96498108317:web:01de4a563796dd9a225174"
+    };
+  
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    var provider = new firebase.auth.GoogleAuthProvider();
+  </script>
+  <script src="function.js"></script>

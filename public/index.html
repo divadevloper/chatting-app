@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+  <script src="https://kit.fontawesome.com/421cfd4472.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+   <div id="container">
+    <div id="sub-container">
+     
+    <div class="text-center mt-2">
+      <p> let's chat❤️</p> 
+
+    </div>
+
+    <div id="ptag" class="d-flex p-2">
+      <h5 id="myh5"> your email is <span id="spanner"></span></h5>
+
+      <button id="buttonss" onclick="logout()">log out</button>
+    <a href="edit.html">edit user</a>
+    </div>
+
+    <div>
+      <ul id="displaymess">
+      </ul>
+      <div id="postion" class="ms-4">
+        <i class="fa-solid fa-plus"></i>
+        <input type="text" id="textmessage">
+      <button id="thhe" onclick="sendmess()"><i class="fa-solid fa-paper-plane"></i></button>
+      <i id="icoo" class="fa-solid fa-face-smile"></i>
+      </div>
+
+     
+    </div>
+
+    </div>
+   </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCA9FUL8ECrT4QBqbcAmNqea42pmFX-rOU",
+    authDomain: "chat-fdedf.firebaseapp.com",
+    projectId: "chat-fdedf",
+    storageBucket: "chat-fdedf.appspot.com",
+    messagingSenderId: "96498108317",
+    appId: "1:96498108317:web:01de4a563796dd9a225174"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+
+</script>
+<script src="chat.js"></script>
